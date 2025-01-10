@@ -18,8 +18,6 @@ def main():
     
     # Select device
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    device = 'mps' if torch.backends.mps.is_available() else device
-    
 
     # Load the pretrained model
     model = YOLO(variables['weights'])                
